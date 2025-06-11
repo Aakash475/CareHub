@@ -1,0 +1,60 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <h2 style="color: white;" class="navbar-brand">Z+ HOSPITALS</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+                    routerLink="/doctordashboard">Back</a>
+            </li>
+        </ul>
+        <div class="mx-2">
+            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+                    style="color:white;" href="javascript:void(0);" (click)="logout()">Logout</a></button>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4" *ngIf="patient && patient.patientID">
+  <h4 class="text-center mb-4 text-primary">Patient Details</h4>
+
+  <table class="table table-bordered table-striped">
+    <tbody>
+      <tr>
+        <th scope="row">ID</th>
+        <td>{{ patient.patientID }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Name</th>
+        <td>{{ patient.patientName }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Age</th>
+        <td>{{ patient.patientAge }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Blood Group</th>
+        <td>{{ patient.patientBloodGroup }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Prescription</th>
+        <td>{{ patient.patientPrescription }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Dose</th>
+        <td>{{ patient.patientDose }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Fee</th>
+        <td>{{ patient.patientFee }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Need</th>
+        <td>{{ patient.patientNeed }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

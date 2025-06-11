@@ -1,0 +1,64 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <h2 style="color: white;" class="navbar-brand">Z+ HOSPITALS</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+                    routerLink="/doctordashboard">Back</a>
+            </li>
+            <li class="nav-item">
+                <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+                    routerLink="/medicinelist">View Medicine</a>
+            </li>
+        </ul>
+        <div class="mx-2">
+            <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+                    style="color:white;" href="javascript:void(0);" routerLink="/">Logout</a></button>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <hr>
+    <a style="color: rgb(86, 86, 86); font-size: x-large;">
+        <marquee behavior="scroll" direction="left">
+            Welcome to Dashboard. Please find the patient list below!!. Click Patients to view and update
+            Patients, Click Add Patient</marquee>
+    </a>
+    <hr>
+    <div class="container">
+        <h2 class="text-center">Add New Patient</h2>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" name="name" id="name" placeholder="Enter Your Name" class="form-control"
+                    [(ngModel)]="patient.patientName">
+            </div>
+            <div class="form-group">
+                <input type="number" name="age" id="age" placeholder="Enter Your Age" class="form-control"
+                    [(ngModel)]="patient.patientAge">
+            </div>
+            <div class="form-group">
+                <input type="text" name="blood" id="blood" placeholder="Enter Your Blood Group" class="form-control"
+                    [(ngModel)]="patient.patientBloodGroup">
+            </div>
+            <div class="form-group">
+                <input type="text" name="prescription" id="prescription" placeholder="Enter Your Prescription"
+                    class="form-control" [(ngModel)]="patient.patientPrescription">
+            </div>
+            <div class="form-group">
+                <input type="text" name="dose" id="dose" placeholder="Enter Your Dose" class="form-control"
+                    [(ngModel)]="patient.patientDose">
+            </div>
+            <div class="form-group">
+                <input type="text" name="need" id="need" placeholder="Enter Your Need" class="form-control"
+                    [(ngModel)]="patient.patientNeed">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
