@@ -1,0 +1,36 @@
+/* Carousel text-only styling */
+.carousel-text-only {
+    min-height: 200px;
+    background-color: #343a40;
+    /* Dark background like navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption button {
+    margin: 8px 10px;
+}
+
+/* Remove shadow and border from cards if needed */
+.card {
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Responsive spacing */
+@media (max-width: 767px) {
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Navbar button links */
+.btn-danger a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.btn-danger a:hover {
+    text-decoration: underline;
+}
